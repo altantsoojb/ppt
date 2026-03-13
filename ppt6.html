@@ -1,0 +1,297 @@
+<!doctype html>
+
+<html lang="mn">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SmartExpense Mongolia - Target Market</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #ffffff;
+        color: #111827;
+      }
+      .bg-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        background-color: #f3f4f6;
+        border-bottom-left-radius: 100%;
+        z-index: 0;
+        opacity: 0.5;
+      }
+      .bg-pattern-2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: #eff6ff;
+        border-top-right-radius: 100%;
+        z-index: 0;
+        opacity: 0.5;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 60px 80px;
+      }
+      .header-section {
+        margin-bottom: 40px;
+        max-width: 800px;
+      }
+      .section-tag {
+        font-size: 14px;
+        font-weight: 700;
+        color: #2563eb;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-tag::before {
+        content: "";
+        width: 24px;
+        height: 2px;
+        background-color: #2563eb;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        flex: 1;
+      }
+      .segment-card {
+        background-color: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        padding: 30px;
+        display: flex;
+        gap: 24px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .segment-card:hover {
+        border-color: #2563eb;
+        box-shadow:
+          0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        transform: translateY(-5px);
+      }
+      .segment-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background-color: #f9fafb;
+        border-radius: 0 0 0 100%;
+        z-index: 0;
+        transition: background-color 0.3s ease;
+      }
+      .segment-card:hover::after {
+        background-color: #eff6ff;
+      }
+      .icon-container {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        background-color: #eff6ff;
+        color: #2563eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        flex-shrink: 0;
+        z-index: 1;
+      }
+      .card-content {
+        z-index: 1;
+        flex: 1;
+      }
+      .segment-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 8px;
+      }
+      .segment-desc {
+        font-size: 14px;
+        color: #6b7280;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+      .key-trait {
+        display: inline-flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 600;
+        color: #4b5563;
+        background-color: #f3f4f6;
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
+      .early-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #dbeafe;
+        color: #1e40af;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 4px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .footer {
+        position: absolute;
+        bottom: 24px;
+        left: 80px;
+        right: 80px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #9ca3af;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Background elements -->
+      <div class="bg-pattern"></div>
+      <div class="bg-pattern-2"></div>
+      <!-- Main Content -->
+      <div class="content-wrapper">
+        <!-- Header -->
+        <div class="header-section">
+          <p class="section-tag">ЗОРИЛТОТ ЗАХ ЗЭЭЛ (TARGET MARKET)</p>
+          <h2 class="text-4xl font-extrabold text-gray-900 mb-2 leading-tight">
+            Бидний <span class="text-blue-600">эхний хэрэглэгчид</span> хэн бэ?
+          </h2>
+          <p class="text-gray-600 text-lg">
+            Олон улсын төлбөр, олон ажилтны худалдан авалттай, гэхдээ хяналт сул
+            сегментүүд.
+          </p>
+        </div>
+        <!-- Segments Grid -->
+        <div class="grid-container">
+          <!-- Segment 1: Startups/IT -->
+          <div class="segment-card">
+            <div class="icon-container">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <div class="card-content">
+              <p class="segment-title">Технологийн стартапууд</p>
+              <p class="segment-desc">
+                Зардлын уян хатан байдлыг эрэлхийлэгч, SaaS хэрэглээ өндөртэй
+                багууд.
+              </p>
+              <p class="key-trait">
+                <i class="fa-solid fa-bolt text-yellow-500 mr-2"></i>Хурдан
+                өсөлттэй
+              </p>
+            </div>
+          </div>
+          <!-- Segment 2: Marketing Agencies -->
+          <div class="segment-card">
+            <div class="icon-container">
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <div class="card-content">
+              <p class="segment-title">Маркетингийн агентлагууд</p>
+              <p class="segment-desc">
+                Facebook, Google Ads зэрэг олон улсын зар сурталчилгааны төлбөр
+                ихтэй газрууд.
+              </p>
+              <p class="key-trait">
+                <i class="fa-solid fa-globe text-blue-500 mr-2"></i>Олон улсын
+                гүйлгээ
+              </p>
+            </div>
+          </div>
+          <!-- Segment 3: E-commerce -->
+          <div class="segment-card">
+            <div class="icon-container">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="card-content">
+              <p class="segment-title">E-commerce Бизнесүүд</p>
+              <p class="segment-desc">
+                Хүргэлт, ложистик болон үйл ажиллагааны олон жижиг зардлын
+                хяналт шаардлагатай.
+              </p>
+              <p class="key-trait">
+                <i class="fa-solid fa-box text-orange-500 mr-2"></i>Үйл
+                ажиллагааны зардал
+              </p>
+            </div>
+          </div>
+          <!-- Segment 4: NGOs/Projects -->
+          <div class="segment-card">
+            <div class="icon-container">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <div class="card-content">
+              <p class="segment-title">ТББ &amp; Төслүүд</p>
+              <p class="segment-desc">
+                Төслийн төсвийг нарийн хянах, донор байгууллагад тайлагнах өндөр
+                шаардлагатай.
+              </p>
+              <p class="key-trait">
+                <i class="fa-solid fa-file-contract text-green-500 mr-2"></i
+                >Төсвийн сахилга бат
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+          <p>SmartExpense Mongolia • Confidential</p>
+          <p>6</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="navigation_snippet.js"></script>
+</html>

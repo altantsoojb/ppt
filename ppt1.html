@@ -1,0 +1,300 @@
+<!doctype html>
+
+<html lang="mn">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SmartExpense Mongolia - Cover</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #ffffff;
+        color: #111827;
+      }
+      .bg-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #f3f4f6;
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: 0;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 0 80px;
+      }
+      .logo-placeholder {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+      .logo-icon {
+        width: 48px;
+        height: 48px;
+        background-color: #2563eb;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        margin-right: 12px;
+      }
+      .logo-text {
+        font-weight: 800;
+        font-size: 24px;
+        color: #111827;
+        letter-spacing: -0.5px;
+      }
+      .accent-bar {
+        width: 80px;
+        height: 6px;
+        background-color: #2563eb;
+        margin-bottom: 24px;
+        border-radius: 3px;
+      }
+      .card-visual {
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 480px;
+        height: 300px;
+        background-color: #1e40af;
+        border-radius: 24px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px;
+        color: white;
+        z-index: 2;
+      }
+      .card-chip {
+        width: 50px;
+        height: 36px;
+        background-color: #ffd700;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+      .card-chip::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background: repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 10px,
+          rgba(0, 0, 0, 0.1) 10px,
+          rgba(0, 0, 0, 0.1) 11px
+        );
+      }
+      .floating-ui {
+        position: absolute;
+        right: 60px;
+        top: 40%;
+        width: 280px;
+        background: white;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .presenter-info {
+        margin-top: 60px;
+        display: flex;
+        gap: 40px;
+        font-size: 14px;
+        color: #6b7280;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 24px;
+        width: fit-content;
+      }
+      .presenter-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Background shape -->
+      <div class="bg-pattern"></div>
+      <!-- Content -->
+      <div class="content-wrapper">
+        <div class="w-1/2 pr-10">
+          <div class="logo-placeholder">
+            <div class="logo-icon">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <p class="logo-text">
+              SmartExpense <span class="text-blue-600">Mongolia</span>
+            </p>
+          </div>
+          <div class="accent-bar"></div>
+          <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+            Монгол компаниудын<br />
+            <span class="text-blue-600">зардлын удирдлагын</span><br />
+            ухаалаг шийдэл
+          </h1>
+          <p class="text-xl text-gray-600 font-medium mb-8 leading-relaxed">
+            Гүйлгээний мөчөөс нягтлан хүртэл — бүрэн автоматаар.
+          </p>
+          <div class="presenter-info">
+            <div class="presenter-item">
+              <i class="fa-solid fa-user text-blue-600"></i>
+              <p class="font-semibold text-gray-800">[Илтгэгчийн Нэр]</p>
+            </div>
+            <div class="presenter-item">
+              <i class="fa-solid fa-envelope text-blue-600"></i>
+              <p>[И-мэйл]</p>
+            </div>
+            <div class="presenter-item">
+              <i class="fa-solid fa-phone text-blue-600"></i>
+              <p>[Утас]</p>
+            </div>
+          </div>
+        </div>
+        <!-- Visual elements on the right -->
+        <div class="card-visual">
+          <div class="flex justify-between items-start">
+            <div class="card-chip"></div>
+            <i class="fa-solid fa-wifi text-white opacity-70 text-2xl"></i>
+          </div>
+          <div>
+            <p class="text-white text-opacity-80 text-lg mb-2 tracking-widest">
+              **** **** **** 4291
+            </p>
+            <div class="flex justify-between items-end">
+              <div>
+                <p class="text-xs text-blue-200 uppercase mb-1">Card Holder</p>
+                <p class="font-bold tracking-wide">SMART EXPENSE</p>
+              </div>
+              <div class="flex flex-col items-end">
+                <p class="text-xs text-blue-200 uppercase mb-1">Expires</p>
+                <p class="font-bold">09/28</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bottom-6 right-8">
+            <svg
+              class="h-10 w-16"
+              fill="none"
+              viewbox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="16"
+                cy="24"
+                fill="#EB001B"
+                fill-opacity="0.8"
+                r="14"
+              ></circle>
+              <circle
+                cx="32"
+                cy="24"
+                fill="#F79E1B"
+                fill-opacity="0.8"
+                r="14"
+              ></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="floating-ui">
+          <div
+            class="flex items-center justify-between mb-4 border-b pb-2 border-gray-100"
+          >
+            <div class="flex items-center gap-2">
+              <div
+                class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600"
+              >
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500">Transaction Approved</p>
+                <p class="text-sm font-bold text-gray-800">AWS Subscription</p>
+              </div>
+            </div>
+            <p class="text-sm font-bold text-gray-900">-$240.00</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"
+              >
+                <i class="fa-solid fa-receipt text-xs"></i>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500">Receipt Scanned</p>
+                <p class="text-sm font-bold text-gray-800">Coffee Meeting</p>
+              </div>
+            </div>
+            <p class="text-sm font-bold text-gray-900">-$15.50</p>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="absolute bottom-6 left-0 w-full px-20 flex justify-between items-center text-xs text-gray-400"
+      >
+        <p>SmartExpense Mongolia • Confidential</p>
+        <p>2026</p>
+      </footer>
+    </div>
+  </body>
+  <script src="navigation_snippet.js"></script>
+</html>

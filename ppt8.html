@@ -1,0 +1,234 @@
+<!doctype html>
+
+<html lang="mn">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SmartExpense Mongolia - Vision</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #ffffff;
+        color: #111827;
+      }
+      .bg-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F3F4F6' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        z-index: 0;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0 120px;
+        text-align: center;
+      }
+      .vision-tag {
+        font-size: 14px;
+        font-weight: 700;
+        color: #2563eb;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 32px;
+        background-color: #eff6ff;
+        padding: 8px 16px;
+        border-radius: 20px;
+        display: inline-block;
+      }
+      .big-statement {
+        font-size: 64px;
+        font-weight: 800;
+        line-height: 1.1;
+        color: #111827;
+        margin-bottom: 40px;
+        letter-spacing: -1px;
+      }
+      .highlight {
+        color: #2563eb;
+        position: relative;
+        display: inline-block;
+      }
+      .highlight::after {
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        width: 100%;
+        height: 12px;
+        background-color: #bfdbfe;
+        opacity: 0.3;
+        z-index: -1;
+      }
+      .sub-text {
+        font-size: 24px;
+        color: #4b5563;
+        max-width: 900px;
+        margin: 0 auto 60px;
+        line-height: 1.5;
+      }
+      .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        width: 100%;
+        max-width: 1100px;
+      }
+      .pillar-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      .pillar-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: #2563eb;
+        box-shadow:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        transition: transform 0.3s ease;
+      }
+      .pillar-item:hover .pillar-icon {
+        transform: translateY(-5px);
+        border-color: #2563eb;
+      }
+      .pillar-title {
+        font-weight: 600;
+        font-size: 16px;
+        color: #1f2937;
+      }
+      .footer {
+        position: absolute;
+        bottom: 24px;
+        left: 80px;
+        right: 80px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #9ca3af;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 16px;
+        z-index: 20;
+      }
+      .blob {
+        position: absolute;
+        filter: blur(80px);
+        z-index: 0;
+        opacity: 0.4;
+      }
+      .blob-1 {
+        top: -100px;
+        left: -100px;
+        width: 400px;
+        height: 400px;
+        background-color: #dbeafe;
+        border-radius: 50%;
+      }
+      .blob-2 {
+        bottom: -100px;
+        right: -100px;
+        width: 500px;
+        height: 500px;
+        background-color: #f3f4f6;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Background Elements -->
+      <div class="bg-pattern"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <!-- Main Content -->
+      <div class="content-wrapper">
+        <div>
+          <span class="vision-tag">Алсын хараа (Vision)</span>
+        </div>
+        <h1 class="big-statement">
+          Монгол компаниудын<br />
+          <span class="highlight">financial operating system</span> болох
+        </h1>
+        <p class="sub-text">
+          Бид зөвхөн зардлын хяналт бус, бизнесийн санхүүгийн бүх шийдвэрийг
+          <strong>өгөгдөл дээр суурилж</strong> гаргахад тусална.
+        </p>
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <p class="pillar-title">Бодит цагийн өгөгдөл</p>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <p class="pillar-title">Бодлогын хэрэгжилт</p>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <p class="pillar-title">Автомат тайлагнал</p>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <p class="pillar-title">Өргөн экосистем</p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="footer">
+        <p>SmartExpense Mongolia • Confidential</p>
+        <p>8</p>
+      </div>
+    </div>
+  </body>
+  <script src="navigation_snippet.js"></script>
+</html>

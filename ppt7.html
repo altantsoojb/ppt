@@ -1,0 +1,313 @@
+<!doctype html>
+
+<html lang="mn">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SmartExpense Mongolia - Business Model</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #ffffff;
+        color: #111827;
+      }
+      .bg-accent {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35%;
+        height: 100%;
+        background-color: #f8fafc;
+        z-index: 0;
+        border-left: 1px solid #e5e7eb;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 60px 80px;
+      }
+      .header-section {
+        margin-bottom: 40px;
+        max-width: 600px;
+      }
+      .section-tag {
+        font-size: 14px;
+        font-weight: 700;
+        color: #2563eb;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-tag::before {
+        content: "";
+        width: 24px;
+        height: 2px;
+        background-color: #2563eb;
+      }
+      .model-container {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+        height: 400px;
+      }
+      .model-card {
+        flex: 1;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .model-card:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border-color: #93c5fd;
+      }
+      .model-card.featured {
+        background-color: #eff6ff;
+        border-color: #bfdbfe;
+        box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+      }
+      .card-icon {
+        width: 64px;
+        height: 64px;
+        background-color: #f3f4f6;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #2563eb;
+        margin-bottom: 24px;
+      }
+      .model-card.featured .card-icon {
+        background-color: #2563eb;
+        color: white;
+      }
+      .card-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 12px;
+      }
+      .card-desc {
+        font-size: 14px;
+        color: #6b7280;
+        line-height: 1.6;
+        flex-grow: 1;
+      }
+      .card-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 12px;
+        background-color: #def7ec;
+        color: #03543f;
+        border-radius: 9999px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        width: fit-content;
+      }
+      .revenue-pill {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #e5e7eb;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .model-card.featured .revenue-pill {
+        border-top-color: #bfdbfe;
+      }
+      .footer {
+        position: absolute;
+        bottom: 24px;
+        left: 80px;
+        right: 80px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #9ca3af;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 16px;
+        z-index: 20;
+      }
+      .floating-stat {
+        position: absolute;
+        right: 120px;
+        top: 30px;
+        width: 280px;
+        background: white;
+        padding: 24px;
+        border-radius: 16px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e5e7eb;
+        z-index: 50px;
+      }
+      .stat-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #f3f4f6;
+      }
+      .stat-row:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Background accent -->
+      <div class="bg-accent"></div>
+      <!-- Content Wrapper -->
+      <div class="content-wrapper">
+        <!-- Header -->
+        <div class="header-section">
+          <p class="section-tag">БИЗНЕС МОДЕЛ (BUSINESS MODEL)</p>
+          <h2 class="text-4xl font-extrabold text-gray-900 leading-tight">
+            Орлогын
+            <span class="text-blue-600">давхар урсгалтай</span> тогтвортой бүтэц
+          </h2>
+        </div>
+        <!-- Model Cards -->
+        <div class="model-container">
+          <!-- Stream 1: SaaS -->
+          <div class="model-card featured">
+            <div class="card-badge">Primary Revenue</div>
+            <div class="card-icon">
+              <i class="fa-solid fa-rotate"></i>
+            </div>
+            <p class="card-title">SaaS Subscription</p>
+            <p class="card-desc">
+              Компанийн хэмжээ болон хэрэглэгчийн тооноос хамаарсан сарын
+              тогтмол хураамж.
+            </p>
+            <div class="revenue-pill">
+              <i class="fa-solid fa-check-circle text-blue-600"></i>
+              <p class="text-sm font-semibold text-gray-700">
+                Recurring Monthly Revenue
+              </p>
+            </div>
+          </div>
+          <!-- Stream 2: Transaction -->
+          <div class="model-card">
+            <div class="card-badge bg-yellow-100 text-yellow-800">
+              High Volume
+            </div>
+            <div class="card-icon">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <p class="card-title">Transaction Fee</p>
+            <p class="card-desc">
+              Карт тус бүрийн гүйлгээнээс авах шимтгэл (Interchange fee).
+              Хэрэглээ нэмэгдэх тусам өснө.
+            </p>
+            <div class="revenue-pill">
+              <i class="fa-solid fa-chart-line text-green-500"></i>
+              <p class="text-sm font-semibold text-gray-700">
+                % per Transaction
+              </p>
+            </div>
+          </div>
+          <!-- Stream 3: Enterprise -->
+          <div class="model-card">
+            <div class="card-badge bg-purple-100 text-purple-800">
+              Value Add
+            </div>
+            <div class="card-icon">
+              <i class="fa-solid fa-building-user"></i>
+            </div>
+            <p class="card-title">Enterprise Plan</p>
+            <p class="card-desc">
+              Томоохон байгууллагуудад зориулсан тусгай интеграц, custom тайлан
+              болон дэмжлэг.
+            </p>
+            <div class="revenue-pill">
+              <i class="fa-solid fa-star text-purple-500"></i>
+              <p class="text-sm font-semibold text-gray-700">Custom Pricing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Floating Stat Box (Decorative) -->
+      <div class="floating-stat">
+        <p
+          class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4"
+        >
+          Projected Revenue Mix
+        </p>
+        <div class="stat-row">
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+            <p class="text-sm font-medium text-gray-600">Subscription</p>
+          </div>
+          <p class="text-sm font-bold text-gray-900">60%</p>
+        </div>
+        <div class="stat-row">
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <p class="text-sm font-medium text-gray-600">Interchange</p>
+          </div>
+          <p class="text-sm font-bold text-gray-900">30%</p>
+        </div>
+        <div class="stat-row">
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-purple-500"></div>
+            <p class="text-sm font-medium text-gray-600">Enterprise</p>
+          </div>
+          <p class="text-sm font-bold text-gray-900">10%</p>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="footer">
+        <p>SmartExpense Mongolia • Confidential</p>
+        <p>7</p>
+      </div>
+    </div>
+  </body>
+  <script src="navigation_snippet.js"></script>
+</html>
