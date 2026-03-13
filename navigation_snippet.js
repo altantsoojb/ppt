@@ -1,14 +1,15 @@
 // Энэ кодыг бүх HTML файлын </body> өмнө нэмнэ
 
-// Одоогийн файлын дугаарыг URL-аас авна (ppt1.html -> 1)
-const currentPage = parseInt(
-  window.location.pathname.match(/ppt(\d+)\.html/)?.[1] || "1",
-);
+// Одоогийн файлын дугаарыг URL-аас авна
+// index.html -> 1, ppt2.html -> 2, гэх мэт
+const currentPage = window.location.pathname.includes("index")
+  ? 1
+  : parseInt(window.location.pathname.match(/ppt(\d+)\.html/)?.[1] || "1");
 const totalPages = 9; // Нийт слайдын тоо
 
 function goToPage(n) {
   if (n < 1 || n > totalPages) return;
-  window.location.href = `ppt${n}.html`;
+  window.location.href = n === 1 ? "index.html" : `ppt${n}.html`;
 }
 
 // Гар дээрх arrow товч
